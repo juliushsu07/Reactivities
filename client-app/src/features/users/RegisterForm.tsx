@@ -15,7 +15,7 @@ export default observer(function RegisterForm() {
             setErrors({error}))}
         validationSchema={Yup.object({
             displayName: Yup.string().required(),
-            username: Yup.string().required(),
+            userName: Yup.string().required(),
             email: Yup.string().required().email(),
             password: Yup.string().required(),
         })}
@@ -24,7 +24,7 @@ export default observer(function RegisterForm() {
             <Form className='ui form error' onSubmit={handleSubmit} autoComplete='off' >
                 <Header as='h2' content='Sign up to Reactivities' color='teal' textAlign='center'/>
                 <MyTextInput placeholder="Display Name" name='displayName' />
-                <MyTextInput placeholder="Username" name='username' />
+                <MyTextInput placeholder="Username" name='userName' />
                 <MyTextInput placeholder="Email" name='email' />
                 <MyTextInput placeholder="Password" name='password' type='password' />
                 <ErrorMessage
